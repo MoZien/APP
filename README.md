@@ -5,8 +5,8 @@ Dieses Projekt beinhaltet eine einfache statische Webseite zur Vermarktung eines
 ## Struktur
 
 - `index.html` – Startseite mit Informationen zu Vorteilen, einem Abschnitt über das Unternehmen und einem Kontaktformular.
-- `assets/css/style.css` – Basis-Stylesheet für das Layout.
-- `assets/js/script.js` – JavaScript zur Bearbeitung des Kontaktformulars (Versand über `mailto:`).
+- `assets/css/style.css` – Modernes Stylesheet mit Responsive-Navigation und modernen Farben.
+- `assets/js/script.js` – JavaScript für Kontaktformular, mobile Navigation und sanftes Scrollen.
 
 ## Verwendung
 

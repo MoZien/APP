@@ -1,8 +1,17 @@
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2c3e50;
+    --light-color: #f4f4f4;
+    --dark-color: #333;
+    --text-color: #333;
+}
+
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    color: var(--text-color);
 }
 
 .container {
@@ -12,13 +21,17 @@ body {
 }
 
 header {
-    background: #333;
+    background: var(--dark-color);
     color: #fff;
     padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 header h1 {
     margin: 0;
+    font-size: 1.5rem;
 }
 
 nav ul {
@@ -28,20 +41,36 @@ nav ul {
     gap: 20px;
 }
 
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+}
+.nav-toggle span {
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    display: block;
+}
+
 nav a {
     color: #fff;
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 .hero {
-    background: linear-gradient(135deg, #2c3e50, #3498db);
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
     color: #fff;
     text-align: center;
-    padding: 80px 0;
+    padding: 100px 0;
 }
 
 .features {
-    background: #f4f4f4;
+    background: var(--light-color);
     padding: 40px 0;
 }
 
@@ -56,7 +85,12 @@ nav a {
     flex: 1 1 30%;
     background: #fff;
     padding: 20px;
+    border-radius: 4px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+.feature:hover {
+    transform: translateY(-5px);
 }
 
 .about, .contact {
@@ -67,15 +101,22 @@ form {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 button {
     width: 150px;
     padding: 10px;
-    background: #333;
+    background: var(--primary-color);
     color: #fff;
     border: none;
     cursor: pointer;
+    border-radius: 4px;
+    align-self: flex-start;
+}
+button:hover {
+    background: var(--secondary-color);
 }
 
 footer {
@@ -83,4 +124,26 @@ footer {
     color: #fff;
     text-align: center;
     padding: 20px 0;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: var(--dark-color);
+        flex-direction: column;
+        width: 200px;
+        display: none;
+        padding: 10px;
+    }
+    nav ul.open {
+        display: flex;
+    }
+    .nav-toggle {
+        display: flex;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
 }
