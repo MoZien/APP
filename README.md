@@ -5,8 +5,13 @@ Dieses Projekt beinhaltet eine einfache statische Webseite zur Vermarktung eines
 ## Struktur
 
 - `index.html` – Startseite mit Informationen zu Vorteilen, einem Abschnitt über das Unternehmen und einem Kontaktformular.
+ tiwvmp-codex/website-modernisieren-und-designen
 - `assets/css/style.css` – Modernes Stylesheet mit Responsive-Navigation, Dark-Mode und modernen Farben.
 - `assets/js/script.js` – JavaScript für Kontaktformular, Navigation, Dark-Mode-Schalter und Scrollfunktionen.
+
+- `assets/css/style.css` – Modernes Stylesheet mit Responsive-Navigation und modernen Farben.
+- `assets/js/script.js` – JavaScript für Kontaktformular, mobile Navigation und sanftes Scrollen.
+ main
 
 ## Verwendung
 

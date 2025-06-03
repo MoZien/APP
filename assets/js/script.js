@@ -2,9 +2,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('contactForm');
     const navToggle = document.querySelector('.nav-toggle');
     const navList = document.querySelector('nav ul');
+ tiwvmp-codex/website-modernisieren-und-designen
     const themeToggle = document.querySelector('.theme-toggle');
     const scrollTop = document.getElementById('scrollTop');
     const formMessage = document.getElementById('formMessage');
+
+ main
 
     form.addEventListener('submit', (e) => {
         e.preventDefault();
@@ -44,6 +47,24 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         scrollTop.addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+            if (navList.classList.contains('open')) {
+                navList.classList.remove('open');
+            }
+        });
+    });
+
+    if (navToggle) {
+        navToggle.addEventListener('click', () => {
+            navList.classList.toggle('open');
         });
     }
 
