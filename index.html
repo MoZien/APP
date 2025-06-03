@@ -4,12 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marketing Landing Page</title>
+    <meta name="description" content="Professionelles Marketing für dein Unternehmen">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <header>
         <div class="container">
             <h1>Mein Marketing Unternehmen</h1>
+            <button class="nav-toggle" aria-label="Menü öffnen">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <button class="theme-toggle" aria-label="Farbschema wechseln">🌙</button>
             <nav>
                 <ul>
                     <li><a href="#features">Vorteile</a></li>
@@ -68,6 +78,7 @@
                 <textarea id="message" name="message" rows="5" required></textarea>
 
                 <button type="submit">Absenden</button>
+                <div id="formMessage" class="form-message"></div>
             </form>
         </div>
     </section>
@@ -77,6 +88,8 @@
             <p>&copy; 2024 Mein Marketing Unternehmen</p>
         </div>
     </footer>
+
+    <button id="scrollTop" class="scroll-top" aria-label="Zurück nach oben">↑</button>
 
     <script src="assets/js/script.js"></script>
 </body>
